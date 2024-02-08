@@ -19,7 +19,6 @@
             <h1>Watch Harbour</h1>
             <h3>Your very own binge destination with personalized recommendations and a Binge Diary!</h3>
             <form class="email-signup" action="{{ url_for('get_started') }}" method="POST">
-                <!-- <input type="text" placeholder="Username" name="username" id="username" required> -->
                 <input type="'text" class="input" name="username" placeholder="Username" required="required" value="{{request.form.username}}">
                 <button type="submit">Get Started</button>
             </form>
@@ -32,7 +31,7 @@
                 <p>You can choose movies, TV shows available across all OTT platforms for the best movie recommendations for your next binge session.</p>
             </div>
             <div class="img-col">
-                <img src="" alt="image of dashboard">
+                <img src="{{ url_for('static', filename='images/Dashboard.png')}}" alt="Image of dashboard">
             </div>
         </div>
         <hr>
@@ -42,7 +41,7 @@
             </div>
             <div class="text-col">
                 <h2>Features</h2>
-                <p>Get latest recommendations, maintain a binge diary and review movies and TV shows.</p>
+                <p>Get latest recommendations, maintain a binge diary and review movies.</p>
             </div>
         </div>
         <hr>
@@ -54,7 +53,7 @@
                 <input type="radio" name="accordion" id="first">
                 <label for="first">What is Watch Harbour?</label>
                 <div class="content">
-                    <p>Watch Harbour is a binge platform that provides you with movies and TV shows recommendations based on your watch list.</p>
+                    <p>Watch Harbour is a binge platform that provides you with movie recommendations based on your watch list.</p>
                 </div>
             </li>
             <li>
@@ -68,7 +67,8 @@
                 <input type="radio" name="accordion" id="third">
                 <label for="third">Can we find recommendations for TV shows too?</label>
                 <div class="content">
-                    <p>Watch Harbour provides recommendations for both, movies as well as TV shows.</p>
+                    <p>We're working on this feature. It will be out soon!</p>
+                    <!-- <p>Watch Harbour provides recommendations for both, movies as well as TV shows.</p> -->
                 </div>
             </li>
         </ul>
