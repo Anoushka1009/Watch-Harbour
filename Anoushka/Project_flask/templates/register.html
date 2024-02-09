@@ -10,115 +10,56 @@
 <body id="register">
     <div class="content-section">
         <form method="POST" action="">
-            <!-- {{ form.hidden_tag() }} -->
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join Today!</legend>
+
                 <div class="form-group">
-                    <!-- {% if form.username.errors %}
-                        <div class="input-group">
-                            {{ form.username(placeholder="Username", class="form-control form-control-lg is-invalid") }}
-                            <div class="input-icon">
-                                <span class="input-group-text"><i class='bx bxs-user'></i></span>
-                            </div>
+                    <div class="input-group">
+                        <input type="'text" class="input" name="username" placeholder="Username" required="required" value="{{request.form.username}}">
+                        <div class="input-icon">
+                            <span class="input-group-text"><i class='bx bxs-user'></i></span>
                         </div>
-                        <div class="invalid-feedback">
-                            {% for error in form.username.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <div class="input-group">
-                            {{ form.username(placeholder="Username", class="form-control form-control-lg") }}
-                            <div class="input-icon">
-                                <span class="input-group-text"><i class='bx bxs-user'></i></span>
-                            </div>
-                        </div>
-                    {% endif %} -->
-                    <input type="'text" class="input" name="username" placeholder="Username" required="required" value="{{request.form.username}}">
-                    <span class="input-group-text"><i class='bx bxs-user'></i></span>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- {% if form.email.errors %}
+                    <div class="form-group">
                         <div class="input-group">
-                            {{ form.email(placeholder="Email", class="form-control form-control-lg is-invalid") }}
+                            <input type="email" class="input" name="email" placeholder="Email" required="required" value="{{request.form.password}}">
                             <div class="input-icon">
                                 <span class="input-group-text"><i class='bx bxs-envelope'></i></span>
-                            </div>
                         </div>
-                        <div class="invalid-feedback">
-                            {% for error in form.email.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <div class="input-group">
-                            {{ form.email(placeholder="Email", class="form-control form-control-lg") }}
-                            <div class="input-icon">
-                                <span class="input-group-text"><i class='bx bxs-envelope'></i></span>
-                            </div>
-                        </div>
-                    {% endif %} -->
-                    <input type="'email" class="input" name="email" placeholder="Email" required="required" value="{{request.form.email}}">
-                    <span class="input-group-text"><i class='bx bxs-user'></i></span>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- {% if form.password.errors %}
+                    <div class="form-group">
                         <div class="input-group">
-                            {{ form.password(placeholder="Password", class="form-control form-control-lg is-invalid") }}
+                            <input type="password" class="input" name="password" placeholder="Password" required="required" value="{{request.form.password}}">
                             <div class="input-icon">
                                 <span class="input-group-text"><i class='bx bxs-lock-open-alt'></i></span>
-                            </div>
                         </div>
-                        <div class="invalid-feedback">
-                            {% for error in form.password.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <div class="input-group">
-                            {{ form.password(placeholder="Password", class="form-control form-control-lg") }}
-                            <div class="input-icon">
-                                <span class="input-group-text"><i class='bx bxs-lock-open-alt'></i></span>
-                            </div>
-                        </div>
-                    {% endif %} -->
-                    <input type="password" class="input" name="password" placeholder="Password" required="required" value="{{request.form.password}}">
-                    <span class="input-group-text"><i class='bx bxs-user'></i></span>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- {% if form.confirm_password.errors %}
-                        <div class="input-group">
-                            {{ form.confirm_password(placeholder=" Confirm Password", class="form-control form-control-lg is-invalid") }}
-                            <div class="input-icon">
-                                <span class="input-group-text"><i class='bx bxs-lock-alt'></i>></span>
-                            </div>
+                    <div class="input-group">
+                        <input type="password" class="input" name="confirm_password" placeholder="Confirm Password" required="required" value="{{request.form.confirm_password}}">
+                        <div class="input-icon">
+                            <span class="input-group-text"><i class='bx bxs-lock-alt'></i></span>
                         </div>
-                        <div class="invalid-feedback">
-                            {% for error in form.confirm_password.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <div class="input-group">
-                            {{ form.confirm_password(placeholder="Confirm Password", class="form-control form-control-lg") }}
-                            <div class="input-icon">
-                                <span class="input-group-text"><i class='bx bxs-lock-alt'></i></span>
-                            </div>
-                        </div>
-                    {% endif %} -->
-                    <input type="password" class="input" name="confirm_password" placeholder="Confirm Password" required="required" value="{{request.form.confirm_password}}">
-                    <span class="input-group-text"><i class='bx bxs-user'></i></span>
-                    <input type="submit" class="submit" value="submit">
+                    </div>
                 </div>
-
             </fieldset>
+
+            <div class="btn">
+                <button type="submit" class="btn btn-outline-info">Sign Up</button>
+            </div>
+            <!-- <div class="btn">
+                <input type="submit" class="submit" value="submit">
+            </div> -->
+
         </form>
-        <div class="btn">
-            <!-- {{ form.submit(class="btn btn-outline-info") }} -->
-        </div>
         <div id="redirect">
             <small>
                 Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Login</a>

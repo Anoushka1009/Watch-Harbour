@@ -22,13 +22,13 @@
             <nav class="navigation">
               <a href="homepage">Homepage</a>
               <a href="#">Dashboard</a>
-              <a href="#">Add Movies</a>
+              <a href="{{url_for('add_movies')}}">Add Movies</a>
               <a href="login">Logout</a>
             </nav>
         </header>
 
         <main>
-            <div class="dash">
+            <!-- <div class="dash">
                 <h1>Edit Watched</h1>
             </div>
             <div class="search-box">
@@ -36,7 +36,19 @@
                     <input type="text" placeholder="Search anything" id="input-box" autocomplete="off">
                     <button><span class="material-symbols-outlined">search</span></button>
                 </div>
+            </div> -->
+            <div class="content-section">
+                <label for="language">Select Watched Movie:</label>
+                <div class="dropdown">
+                    <select name="language" id="language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="c++">C++</option>
+                        <option value="java" selected>Java</option>
+                    </select>
+                </div>
             </div>
+           
         </main>
 </body>
 </html>

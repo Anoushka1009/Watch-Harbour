@@ -6,13 +6,30 @@ from flask_login import logout_user
 from passlib.hash import sha256_crypt
 
 @app.route("/")
-@app.route("/homepage")
-def homepage():
-    return render_template('homepage.html')
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    if request.method == "POST":
+        username = request.form['username']
+        password = request.form['password']
+        user = User.query.filter_by(username=username).first()
+        if user and sha256_crypt.verify(password, user.password):
+            next_page = request.args.get('next')
+            return redirect(next_page) if next_page else redirect(url_for('dashboard'))
+        else:
+            flash('Login Unsuccessful. Please check email and password', 'danger')
+    return render_template('login.html', title='Login')
 
 @app.route("/edit_watched")
 def edit_watched():
     return render_template('edit_watched.html')
+
+@app.route("/homepage")
+def homepage():
+    return render_template('homepage.html')
+
+# @app.route("/edit_watched")
+# def edit_watched():
+#     return render_template('edit_watched.html')
 
 @app.route("/add_movies")
 def add_movies():
@@ -84,18 +101,18 @@ def get_started():
     return render_template('login.html', username=username)
 
 
-@app.route("/login", methods=['GET', 'POST'])
-def login():
-    if request.method == "POST":
-        username = request.form['username']
-        password = request.form['password']
-        user = User.query.filter_by(username=username).first()
-        if user and sha256_crypt.verify(password, user.password):
-            next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('dashboard'))
-        else:
-            flash('Login Unsuccessful. Please check email and password', 'danger')
-    return render_template('login.html', title='Login')
+# @app.route("/login", methods=['GET', 'POST'])
+# def login():
+#     if request.method == "POST":
+#         username = request.form['username']
+#         password = request.form['password']
+#         user = User.query.filter_by(username=username).first()
+#         if user and sha256_crypt.verify(password, user.password):
+#             next_page = request.args.get('next')
+#             return redirect(next_page) if next_page else redirect(url_for('dashboard'))
+#         else:
+#             flash('Login Unsuccessful. Please check email and password', 'danger')
+#     return render_template('login.html', title='Login')
 
 
 @app.route("/logout")
