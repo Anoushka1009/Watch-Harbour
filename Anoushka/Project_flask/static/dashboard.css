@@ -511,8 +511,9 @@ input{
 }  */
 
 .content-section{
+    margin-left: 45%;
     width: 420px;
-    /* height: 80vh; */
+    margin-top: 15%;
     background: azure;
     border: 2px solid rgba(255,255,255,.2);
     color: #7700CC;
@@ -520,6 +521,11 @@ input{
     padding: 20px 35px;
     font-size: large;
     font-weight: 500;
+    /* align-items: center; */
+}
+
+.dropdown{
+    align-items: center;
 }
 
 .dropdown .select{
