@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+      <link rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="{{url_for('static', filename='dashboard.css')}}">
+</head>
+<body>
+    <div class="container">
+        <header> 
+            <div class="logo">
+                <img src="{{url_for('static', filename='images/Watchharbour Logo crop.jpg')}}">
+            </div>
+            <div class="name-web">
+                <h1>WatchHarbour</h1>
+            </div>  
+            <nav class="navigation">
+              <a href="homepage">Homepage</a>
+              <!-- <a href="account">Account</a> -->
+              <!-- <a href="#">About</a> -->
+              <!-- <a href="#">Latest Posts</a> -->
+              <a href="login">Logout</a>
+              <!-- <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="material-symbols-outlined">search</span></button>
+              </form> -->
+            </nav>
+        </header>
+
+        <main>
+            <div class="dash">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="cards">
+                <div class="edit">
+                    <span class="material-symbols-outlined">movie_edit</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h1>Edit</h1>
+                            <h1>Watched</h1>
+                        </div>
+                        <button class="btnLogin-popup">
+                            <a href="{{url_for('edit_watched')}}">Movies</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add">
+                    <span class="material-symbols-outlined">add_circle</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h1>Add</h1>
+                            <h1>New</h1>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btnLogin-popup">
+                                <a href="{{url_for('add_movies')}}">Movies</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommend">
+                    <span class="material-symbols-outlined">recommend</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h1>Recommend</h1>
+                            <h1>More</h1>
+                        </div>
+                        <button class="btnLogin-popup">
+                            <a href="https://flat-bats-drop.loca.lt/">Movies</a>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="most-liked">
+                <h2>Most Watched</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Name</th>
+                            <th>Movie or Show?</th>
+                            <th>Release Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>The Office</td>
+                            <td>Show</td>
+                            <td>2005</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>The Godfather</td>
+                            <td>Movie</td>
+                            <td>1972</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>The Simpsons</td>
+                            <td>Show</td>
+                            <td>1989</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>Farzi</td>
+                            <td>Show</td>
+                            <td>2023</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>Friends</td>
+                            <td>Show</td>
+                            <td>1994</td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>Spider-Man: No Way home</td>
+                            <td>Movie</td>
+                            <td>2021</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="show-review">
+                    <div>
+                        <h3><a href="https://www.imdb.com/list/ls053826112/">Show All</a></h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End of main -->
+
+        <div class="right">
+            <!-- <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Daniel</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="https://github.com/Anoushka1009/Watch-Harbour/blob/main/Anoushka/images/default.jpeg">
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="recent-updates">
+                <h2>Recent Reviews</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{{url_for('static', filename='images/profile1.jpeg')}}">
+                        </div>
+                        <div class="message">
+                            <p><b>Mikela Tyson</b> posted a review about <b>The Office</b>.<br>"No Laugh Tracks!!!"<a href="#">Read more</a></p>
+                            <small class="text-muted">2 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{{url_for('static', filename='images/profile2.jpeg')}}">
+                        </div>
+                        <div class="message">
+                            <p><b>Rocksmani</b> posted a review about <b>Farzi</b>.<br>"Awesome acting, dialogue and story"<a href="#">Read more</a></p>
+                            <small class="text-muted">2 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{{url_for('static', filename='images/profile3.jpeg')}}">
+                        </div>
+                        <div class="message">
+                            <p><b>bat-5</b> posted a review about <b>The Simpsons</b>.<br>"A landmark in TV-show history"<a href="#">Read more</a></p>
+                            <small class="text-muted">2 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of recent updates -->
+
+            <div class="my-reviews">
+                <h2>My Reviews</h2>
+                <div class="item">
+                    <div class="profile-photo">
+                        <img src="{{url_for('static', filename='images/default.jpeg')}}">
+                    </div>
+                    <div class="message">
+                        <p><b>YourBingeBuddy</b> posted a review about <b>The Simpsons</b>.<br>"A landmark in TV-show history"<br><a href="#">Read more</a></p>
+                        <small class="text-muted">2 minutes ago</small>
+                    </div>
+                </div>
+
+                <!-- instead of coding the same block twice or more, display latest 2 reviews.
+                    Used div to display column wise  -->
+                <div class="item">
+                    <div class="profile-photo">
+                        <img src="{{url_for('static', filename='images/default.jpeg')}}">
+                    </div>
+                    <div class="message">
+                        <p><b>YourBingeBuddy</b> posted a review about <b>The Simpsons</b>.<br>"A landmark in TV-show history"<br><a href="#">Read more</a></p>
+                        <small class="text-muted">2 minutes ago</small>
+                    </div>
+                </div>
+                <!-- End my reviews -->
+
+                <!-- <div class="item add-review">
+                    <div>
+                        <span class="material-symbols-outlined">add</span>
+                        <a href="#"><h3>Add review</h3></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
