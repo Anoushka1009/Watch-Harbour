@@ -20,14 +20,7 @@
             </div>  
             <nav class="navigation">
               <a href="homepage">Homepage</a>
-              <!-- <a href="account">Account</a> -->
-              <!-- <a href="#">About</a> -->
-              <!-- <a href="#">Latest Posts</a> -->
               <a href="login">Logout</a>
-              <!-- <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="material-symbols-outlined">search</span></button>
-              </form> -->
             </nav>
         </header>
 
@@ -44,7 +37,7 @@
                             <h1>Watched</h1>
                         </div>
                         <button class="btnLogin-popup">
-                            <a href="{{url_for('edit_watched')}}">Movies</a>
+                            <a href="#">Movies</a>
                         </button>
                     </div>
                 </div>
@@ -58,7 +51,7 @@
                         </div>
                         <div class="btn-group">
                             <button class="btnLogin-popup">
-                                <a href="{{url_for('add_movies')}}">Movies</a>
+                                <a href="#">Movies</a>
                             </button>
                         </div>
                     </div>
@@ -123,36 +116,22 @@
                         </tr>
                         <tr>
                             <td>6.</td>
-                            <td>Spider-Man: No Way homepage</td>
+                            <td>Spider-Man: No Way home</td>
                             <td>Movie</td>
                             <td>2021</td>
                         </tr>
                     </tbody>
                 </table>
-                <!-- <div class="show-review">
+                <div class="show-review">
                     <div>
                         <h3><a href="https://www.imdb.com/list/ls053826112/">Show All</a></h3>
                     </div>
-                </div> -->
+                </div>
             </div>
         </main>
         <!-- End of main -->
 
         <div class="right">
-            <!-- <div class="top">
-                <button id="menu-btn">
-                    <span class="material-icons-sharp">menu</span>
-                </button>
-                <div class="profile">
-                    <div class="info">
-                        <p>Hey, <b>Daniel</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="https://github.com/Anoushka1009/Watch-Harbour/blob/main/Anoushka/images/default.jpeg">
-                    </div>
-                </div>
-            </div> -->
 
             <div class="recent-updates">
                 <h2>Recent Reviews</h2>
@@ -200,8 +179,6 @@
                     </div>
                 </div>
 
-                <!-- instead of coding the same block twice or more, display latest 2 reviews.
-                    Used div to display column wise  -->
                 <div class="item">
                     <div class="profile-photo">
                         <img src="{{url_for('static', filename='images/default.jpeg')}}">
@@ -211,15 +188,6 @@
                         <small class="text-muted">2 minutes ago</small>
                     </div>
                 </div>
-                <!-- End my reviews -->
-
-                <!-- <div class="item add-review">
-                    <div>
-                        <span class="material-symbols-outlined">add</span>
-                        <a href="#"><h3>Add review</h3></a>
-                    </div>
-                </div> -->
-            </div>
         </div>
     </div>
 </body>

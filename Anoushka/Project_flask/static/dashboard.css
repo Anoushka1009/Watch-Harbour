@@ -9,12 +9,10 @@
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
     --color-dark: #363949;
-    /* dark: #363949 */
     --color-light: rgba(132,139,200,0.18);
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #10082a;
-/* bg: #f6f6f9 */
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
     --border-radius-2: 0.8rem;
@@ -24,7 +22,6 @@
     --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(var(--color-light));
-    /* --box-shadow: grey; */
 }
 
 *{
@@ -240,13 +237,7 @@ main .cards>div{
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
-    /* box-shadow: var(--box-shadow);
-    transition: all 300ms ease; */
 }
-
-/* main .cards>div:hover{
-    box-shadow: none;
-} */
 
 main .cards>div span{
     background: var(--color-primary);
@@ -265,7 +256,6 @@ main .cards>div.add span{
 }
 
 main .cards>div .middle{
-    /* display: flex; */
     align-items: center;
     justify-content: space-between;
 }
@@ -275,35 +265,6 @@ main .cards h3{
     font-size: 1rem;
 }
 
-/* Buttons */
-/* .middle .btnLogin-popup{
-    width: 100px;
-    height: 45px;
-    background: #7700CC;
-    border: 5px solid var(--color-white);
-    outline: none;
-    border-radius: 14px;
-    cursor: pointer;
-    font-size: 1.5em;
-    color: var(--color-white);
-    text-align: justify;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .5s;
-} */
-
-/* .middle .btnLogin-popup a{
-    background: transparent;
-    border: 2px solid azure;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.5em;
-    color: var(--color-primary);
-    font-weight: 500;
-    margin-left: 40px;
-    text-align: center;
-}  */
 
 .middle .btnLogin-popup a{
     padding: 5px 11px;
@@ -449,13 +410,6 @@ main table tbody tr:last-child td{
     width: 100%;
 }
 
-/* .right .my-reviews .item .icon{
-    padding: 0.6rem;
-    color: var(--color-white);
-    border-radius: 50%;
-    background: var(--color-primary);
-    display: flex;
-} */
 
 .right .my-reviews .add-review{
     cursor: pointer;
@@ -488,46 +442,3 @@ main table tbody tr:last-child td{
 } */
 
 
-/* ADD MOVIES */
-/* .search-box{
-    width: 600px;
-    background: #fff;
-    margin: 200px auto 0;
-    border-radius: 5px;
-}
-.row{
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-}
-input{
-    flex: 1;
-    height: 50px;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 18px;
-    color: #333;
-}  */
-
-.content-section{
-    margin-left: 45%;
-    width: 420px;
-    margin-top: 15%;
-    background: azure;
-    border: 2px solid rgba(255,255,255,.2);
-    color: #7700CC;
-    border-radius: 12px;
-    padding: 20px 35px;
-    font-size: large;
-    font-weight: 500;
-    /* align-items: center; */
-}
-
-.dropdown{
-    align-items: center;
-}
-
-.dropdown .select{
-    background: #7700CC;
-}
